@@ -1,0 +1,4 @@
+interface:
+  display_name: "Goto"
+  short_description: "Set current file and cursor position"
+  default_prompt: "Use $goto to select the current file and line for hand-authored editing."

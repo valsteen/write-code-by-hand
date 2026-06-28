@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Code By Hand"
+  short_description: "Natural-language cursor for hand-written code"
+  default_prompt: "Use $write-code-by-hand to edit files as a deliberately literal natural-language text editor."

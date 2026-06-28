@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify"
+  short_description: "Run exact human-selected commands"
+  default_prompt: "Use $verify to run a specific human-selected verification command."

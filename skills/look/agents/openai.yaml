@@ -1,0 +1,4 @@
+interface:
+  display_name: "Look"
+  short_description: "Show directories and line-numbered excerpts"
+  default_prompt: "Use $look to show a folder, file, or exact line range without editing."

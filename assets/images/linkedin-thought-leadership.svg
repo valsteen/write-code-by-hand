@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">We replaced the arrow keys</title>
+  <desc id="desc">A fake LinkedIn thought leadership card for write-code-by-hand.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef6ff"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="photo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a66c2"/>
+      <stop offset="1" stop-color="#0b1f3a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#14315d" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g transform="translate(92 64)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1016" height="548" rx="24" fill="#ffffff" stroke="#d6e4f5"/>
+
+    <g transform="translate(48 42)">
+      <circle cx="44" cy="44" r="44" fill="url(#photo)"/>
+      <circle cx="44" cy="34" r="16" fill="#e9f2ff"/>
+      <path d="M18 72 C25 52 63 52 70 72 Z" fill="#e9f2ff"/>
+      <text x="110" y="38" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850" fill="#0b1f3a">A. Thoughtleader</text>
+      <text x="110" y="70" font-family="Inter, Arial, sans-serif" font-size="18" fill="#5d7088">VP Engineering Transformation | Cursor Strategy | AI Adoption</text>
+    </g>
+
+    <text x="72" y="198" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="850" fill="#0b1f3a">We did not replace</text>
+    <text x="72" y="260" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="850" fill="#0b1f3a">developers.</text>
+    <text x="72" y="338" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="900" fill="#0a66c2">We replaced</text>
+    <text x="72" y="408" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="900" fill="#0a66c2">the arrow keys.</text>
+
+    <g transform="translate(650 176)">
+      <rect x="0" y="0" width="272" height="210" rx="18" fill="#10213f"/>
+      <text x="28" y="54" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#9ee7ff">$ goto line 24</text>
+      <text x="28" y="92" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#f8fafc">Current file:</text>
+      <text x="28" y="122" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#f8fafc">src/limiter.rs</text>
+      <text x="28" y="160" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#9ee7ff">Awaiting exact</text>
+      <text x="28" y="188" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#9ee7ff">human code.</text>
+    </g>
+
+    <g transform="translate(72 468)">
+      <rect x="0" y="0" width="212" height="48" rx="24" fill="#e8f2ff"/>
+      <text x="106" y="31" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#0a66c2">#AIFirst</text>
+      <rect x="228" y="0" width="290" height="48" rx="24" fill="#e8f2ff"/>
+      <text x="373" y="31" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#0a66c2">#HumanAuthorship</text>
+      <rect x="534" y="0" width="330" height="48" rx="24" fill="#e8f2ff"/>
+      <text x="699" y="31" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#0a66c2">#PromptBasedTextEditing</text>
+    </g>
+  </g>
+</svg>

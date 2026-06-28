@@ -1,0 +1,4 @@
+interface:
+  display_name: "Replace Line"
+  short_description: "Replace one line with exact text"
+  default_prompt: "Use $replace-line to replace one exact line with user-provided text."

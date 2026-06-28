@@ -1,0 +1,4 @@
+interface:
+  display_name: "Move File"
+  short_description: "Move or rename exact file paths"
+  default_prompt: "Use $move-file to move, rename, or copy a file using exact paths."

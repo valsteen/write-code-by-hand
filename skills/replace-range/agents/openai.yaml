@@ -1,0 +1,4 @@
+interface:
+  display_name: "Replace Range"
+  short_description: "Replace an exact line range"
+  default_prompt: "Use $replace-range to replace exact lines with an exact user-provided block."

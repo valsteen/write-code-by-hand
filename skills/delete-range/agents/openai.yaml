@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delete Range"
+  short_description: "Delete exact line ranges"
+  default_prompt: "Use $delete-range to delete a precise line range after confirmation."

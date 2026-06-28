@@ -1,0 +1,4 @@
+interface:
+  display_name: "Save"
+  short_description: "Persist pending exact edits"
+  default_prompt: "Use $save to persist exact edits and report changed paths."

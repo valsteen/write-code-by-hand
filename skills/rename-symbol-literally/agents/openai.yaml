@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rename Symbol Literally"
+  short_description: "Replace exact tokens without semantic refactoring"
+  default_prompt: "Use $rename-symbol-literally to replace one exact token with another exact token."

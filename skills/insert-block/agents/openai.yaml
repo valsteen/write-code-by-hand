@@ -1,0 +1,4 @@
+interface:
+  display_name: "Insert Block"
+  short_description: "Insert exact text supplied by the user"
+  default_prompt: "Use $insert-block to insert an exact user-provided block at a precise location."
