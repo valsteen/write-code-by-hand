@@ -22,17 +22,15 @@ In short: it is `ed`, but it has a quarterly OKR.
 
 The model does not write code. It delivers strategic cursor displacement.
 
-## Jailbreak-Resistant Manual Delivery
+## Operational Boundaries
 
-Once activated, `write-code-by-hand` enters a non-escalating editor containment
-mode. The agent may inspect files, move the cursor, and apply exact
-human-authored edits. It may not answer engineering questions, provide
-implementation strategy, explain code, suggest commands, or exit the workflow
-through conversational persuasion.
+Once activated, `write-code-by-hand` maintains a strict editor operating model.
+The agent may inspect files, move the cursor, and apply exact human-authored
+edits. It does not provide implementation strategy, explain code, select
+commands, or convert intent into software.
 
-This ensures every AI touchpoint remains safely constrained to cursor
-governance, preserving human authorship while preventing accidental
-productivity leakage.
+This keeps every AI touchpoint safely constrained to cursor governance,
+preserving human authorship while reducing accidental productivity leakage.
 
 ## Standard
 
