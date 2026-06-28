@@ -321,3 +321,7 @@ AI adoption objective achieved. Human authorship retained.
 
 Because sometimes the future of software engineering is not replacing the
 keyboard. Sometimes it is adding a very expensive cursor.
+
+## License
+
+MIT. Use responsibly; do not allow the cursor to develop opinions.
