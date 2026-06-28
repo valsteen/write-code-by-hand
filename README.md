@@ -46,16 +46,48 @@ operational instructions stay in `SKILL.md` so the collection remains portable.
 
 ## Installation
 
-Use the skill folders directly with any Agent Skills-compatible tool.
+Clone the repository:
 
-For Codex, install or symlink the folders into a scanned skills location such as:
-
-```text
-$HOME/.agents/skills
+```bash
+git clone https://github.com/valsteen/write-code-by-hand.git
+cd write-code-by-hand
 ```
 
-For Claude Code, install or symlink the folders into the skills location
-supported by your Claude Code setup.
+### Codex
+
+Install the skills into your personal Codex skill folder:
+
+```bash
+mkdir -p "$HOME/.agents/skills"
+cp -R skills/* "$HOME/.agents/skills/"
+```
+
+Then invoke the editor mode explicitly:
+
+```text
+$write-code-by-hand
+```
+
+Codex should detect skill changes automatically. If the skill does not appear,
+restart Codex.
+
+### Claude Code
+
+Install the skills into your personal Claude Code skill folder:
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+cp -R skills/* "$HOME/.claude/skills/"
+```
+
+Then invoke the editor mode explicitly:
+
+```text
+/write-code-by-hand
+```
+
+For project-only installation, copy the folders into a repository-local
+`.claude/skills/` directory instead.
 
 ## Thought Leadership
 
