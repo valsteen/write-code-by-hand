@@ -55,6 +55,8 @@ The canonical skill folders live under `skills/`:
 
 Codex-specific UI metadata lives in each skill's `agents/openai.yaml`. The
 operational instructions stay in `SKILL.md` so the collection remains portable.
+Use `$skill-name` in Codex and `/skill-name` in Claude Code when invoking a
+primitive explicitly.
 
 ## Installation
 
@@ -65,7 +67,13 @@ git clone https://github.com/valsteen/write-code-by-hand.git
 cd write-code-by-hand
 ```
 
+The repository includes both `.claude-plugin/plugin.json` and
+`.codex-plugin/plugin.json`, following the same dual-harness plugin convention
+used by Superpowers. The portable skill instructions still live in `skills/`.
+
 ### Codex
+
+#### Direct skill install
 
 Install the skills into your personal Codex skill folder:
 
@@ -83,7 +91,32 @@ $write-code-by-hand
 Codex should detect skill changes automatically. If the skill does not appear,
 restart Codex.
 
+#### Plugin manifest
+
+The Codex plugin manifest is included for plugin import, marketplace packaging,
+and local plugin development:
+
+```text
+.codex-plugin/plugin.json
+```
+
 ### Claude Code
+
+#### One-session plugin load
+
+From the cloned repository, load the plugin for a single Claude Code session:
+
+```bash
+claude --plugin-dir .
+```
+
+Then invoke the editor mode explicitly:
+
+```text
+/write-code-by-hand
+```
+
+#### Direct skill install
 
 Install the skills into your personal Claude Code skill folder:
 

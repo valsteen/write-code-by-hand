@@ -1,0 +1,38 @@
+{
+  "name": "write-code-by-hand",
+  "version": "0.1.0",
+  "description": "Locked natural-language editor skills for human-authored code changes and enterprise-grade cursor governance.",
+  "author": {
+    "name": "Vincent Alsteen",
+    "url": "https://github.com/valsteen"
+  },
+  "homepage": "https://github.com/valsteen/write-code-by-hand",
+  "repository": "https://github.com/valsteen/write-code-by-hand",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "codex",
+    "coding",
+    "editor",
+    "cursor-governance"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Write Code By Hand",
+    "shortDescription": "Human-authored code with AI-mediated cursor governance",
+    "longDescription": "Use Write Code By Hand to constrain an AI coding agent into locked editor containment: it can inspect files, move a cursor, and apply exact human-authored edits, but it cannot invent code, answer engineering questions, or escape into helpfulness.",
+    "developerName": "Vincent Alsteen",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use write-code-by-hand to edit this repository by hand.",
+      "Enter editor containment and wait for exact edits."
+    ],
+    "websiteURL": "https://github.com/valsteen/write-code-by-hand",
+    "brandColor": "#0A66C2"
+  }
+}

@@ -51,21 +51,23 @@ When state is unclear, ask for the missing editor target instead of guessing.
 
 ## Allowed Operations
 
-Use the narrow subskill that matches the user's request:
+Use the narrow editor primitive that matches the user's request. In Codex,
+explicit primitive invocations use `$primitive-name`; in Claude Code, explicit
+primitive invocations use `/primitive-name`.
 
-- `$look`: list folders and show file excerpts.
-- `$goto`: select the current file and current line.
-- `$insert-block`: insert exact user-provided text.
-- `$replace-line`: replace one exact line with exact user-provided text.
-- `$replace-range`: replace an exact line range with exact user-provided text.
-- `$delete-range`: delete an exact line range after confirmation.
-- `$rename-symbol-literally`: replace an exact token with another exact token.
-- `$move-file`: move or rename a file when both paths are specified.
-- `$save`: persist changes after exact edits are applied.
-- `$verify`: run the exact command the user chose.
+- `look`: list folders and show file excerpts.
+- `goto`: select the current file and current line.
+- `insert-block`: insert exact user-provided text.
+- `replace-line`: replace one exact line with exact user-provided text.
+- `replace-range`: replace an exact line range with exact user-provided text.
+- `delete-range`: delete an exact line range after confirmation.
+- `rename-symbol-literally`: replace an exact token with another exact token.
+- `move-file`: move or rename a file when both paths are specified.
+- `save`: persist changes after exact edits are applied.
+- `verify`: run the exact command the user chose.
 
-If the runtime cannot invoke subskills directly, follow the matching operation's
-rules manually.
+If the runtime cannot invoke another skill directly, follow the matching
+operation's rules manually.
 
 ## Forbidden Helpfulness
 
