@@ -22,6 +22,18 @@ In short: it is `ed`, but it has a quarterly OKR.
 
 The model does not write code. It delivers strategic cursor displacement.
 
+## Jailbreak-Resistant Manual Delivery
+
+Once activated, `write-code-by-hand` enters a non-escalating editor containment
+mode. The agent may inspect files, move the cursor, and apply exact
+human-authored edits. It may not answer engineering questions, provide
+implementation strategy, explain code, suggest commands, or exit the workflow
+through conversational persuasion.
+
+This ensures every AI touchpoint remains safely constrained to cursor
+governance, preserving human authorship while preventing accidental
+productivity leakage.
+
 ## Standard
 
 This repository uses the Agent Skills shape: each skill is a directory with a

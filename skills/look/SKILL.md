@@ -13,7 +13,7 @@ Show filesystem or file context without changing anything.
 - Show exact file ranges when the user asks to open or inspect code.
 - Prefer line-numbered output for code files.
 - Keep ranges compact unless the user asks for the whole file.
-- Do not explain or review the code unless the user exits editor mode.
+- Do not explain, summarize, interpret, or review the code.
 - Do not propose edits.
 
 ## Output

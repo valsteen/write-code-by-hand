@@ -9,9 +9,8 @@ Run the exact command selected by the user.
 
 ## Rules
 
-- Prefer the user's exact command.
-- If the user asks what to run, suggest narrow options but wait for selection
-  before executing when in strict editor mode.
+- Require the user's exact command.
+- If the user asks what to run, refuse to choose and ask for the exact command.
 - Do not change files in response to verification failures.
 - Summarize command, exit status, and the key failing or passing lines.
 - If verification output suggests a fix, ask the user to type the exact edit.
