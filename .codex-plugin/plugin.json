@@ -1,7 +1,7 @@
 {
   "name": "write-code-by-hand",
   "version": "0.1.0",
-  "description": "Natural-language editor skills for human-authored code changes and enterprise-grade cursor governance.",
+  "description": "Agent Skills for human-authored code with AI-mediated cursor governance.",
   "author": {
     "name": "Vincent Alsteen",
     "url": "https://github.com/valsteen"
@@ -19,7 +19,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Write Code By Hand",
-    "shortDescription": "Human-authored code with AI-mediated cursor governance",
+    "shortDescription": "Agent Skills for human-authored code with AI-mediated cursor governance.",
     "longDescription": "Use Write Code By Hand for a strict editor operating model: the agent can inspect files, move a cursor, and apply exact human-authored edits, but it cannot invent code, answer engineering questions, or convert intent into software.",
     "developerName": "Vincent Alsteen",
     "category": "Coding",
