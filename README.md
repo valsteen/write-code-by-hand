@@ -104,8 +104,8 @@ cd write-code-by-hand
 ```
 
 The repository includes both `.claude-plugin/plugin.json` and
-`.codex-plugin/plugin.json`, following the same dual-harness plugin convention
-used by Superpowers. The portable skill instructions still live in `skills/`.
+`.codex-plugin/plugin.json`. The portable skill instructions still live in
+`skills/`.
 
 ### Claude Code
 
@@ -170,8 +170,7 @@ and local plugin development:
 .codex-plugin/plugin.json
 ```
 
-The repo continues to support Codex because private productivity ergonomics and
-enterprise adoption optics are both valid stakeholder journeys.
+The repo continues to support Codex alongside Claude Code.
 
 ## Thought Leadership
 
