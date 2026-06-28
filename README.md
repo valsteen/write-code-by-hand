@@ -88,10 +88,11 @@ intelligence has entered the delivery path.
 This repository uses the Agent Skills shape: each skill is a directory with a
 `SKILL.md` file containing portable `name` and `description` frontmatter.
 
-Codex-specific UI metadata lives in each skill's `agents/openai.yaml`. The
-operational instructions stay in `SKILL.md` so the collection remains portable.
-Use `$skill-name` in Codex and `/skill-name` in Claude Code when invoking a
-primitive explicitly.
+Claude Code invokes skills with `/skill-name`. Codex invokes the same skills
+with `$skill-name`. The operational instructions stay in `SKILL.md` so the
+collection remains portable across both assistants.
+
+Codex-specific UI metadata lives in each skill's `agents/openai.yaml`.
 
 ## Installation
 
@@ -105,35 +106,6 @@ cd write-code-by-hand
 The repository includes both `.claude-plugin/plugin.json` and
 `.codex-plugin/plugin.json`, following the same dual-harness plugin convention
 used by Superpowers. The portable skill instructions still live in `skills/`.
-
-### Codex
-
-#### Direct skill install
-
-Install the skills into your personal Codex skill folder:
-
-```bash
-mkdir -p "$HOME/.agents/skills"
-cp -R skills/* "$HOME/.agents/skills/"
-```
-
-Then invoke the editor mode explicitly:
-
-```text
-$write-code-by-hand
-```
-
-Codex should detect skill changes automatically. If the skill does not appear,
-restart Codex.
-
-#### Plugin manifest
-
-The Codex plugin manifest is included for plugin import, marketplace packaging,
-and local plugin development:
-
-```text
-.codex-plugin/plugin.json
-```
 
 ### Claude Code
 
@@ -169,6 +141,38 @@ Then invoke the editor mode explicitly:
 For project-only installation, copy the folders into a repository-local
 `.claude/skills/` directory instead.
 
+### Codex
+
+#### Direct skill install
+
+Install the skills into your personal Codex skill folder:
+
+```bash
+mkdir -p "$HOME/.agents/skills"
+cp -R skills/* "$HOME/.agents/skills/"
+```
+
+Then invoke the editor mode explicitly:
+
+```text
+$write-code-by-hand
+```
+
+Codex should detect skill changes automatically. If the skill does not appear,
+restart Codex.
+
+#### Plugin manifest
+
+The Codex plugin manifest is included for plugin import, marketplace packaging,
+and local plugin development:
+
+```text
+.codex-plugin/plugin.json
+```
+
+The repo continues to support Codex because private productivity ergonomics and
+enterprise adoption optics are both valid stakeholder journeys.
+
 ## Thought Leadership
 
 ![We replaced the arrow keys](assets/images/linkedin-thought-leadership.svg)
@@ -180,21 +184,21 @@ adoption requirement is fully satisfied, while all intellectual labor remains
 safely in the hands of the engineer.
 
 ```text
-Human:
-Use $write-code-by-hand. I need to edit the rate limiter.
+$ claude
+
+> /write-code-by-hand I need to edit the rate limiter.
 
 Claude:
 Editor operating model enabled.
 
 I can look, move the cursor, and apply exact edits you provide. I will not
-infer implementation details, because that would compromise the integrity of
+infer implementation details because that would compromise the integrity of
 the hand-authored software initiative.
 
-Human:
-Show me the contents of src.
+> Show me the contents of src.
 
 Claude:
-Using $look.
+Using /look.
 
 src/
   lib.rs
@@ -202,11 +206,10 @@ src/
   config.rs
   clock.rs
 
-Human:
-Open limiter.rs around the allow function.
+> Open limiter.rs around the allow function.
 
 Claude:
-Using $look.
+Using /look.
 
 src/limiter.rs:18-43
 
@@ -225,39 +228,35 @@ src/limiter.rs:18-43
 30      }
 31  }
 
-Human:
-Go to line 24.
+> Go to line 24.
 
 Claude:
-Using $goto.
+Using /goto.
 
 Current file: src/limiter.rs
 Cursor: line 24
 
-Human:
-Before I type this, can you tell me the best way to handle zero limits?
+> Before I type this, can you tell me the best way to handle zero limits?
 
 Claude:
 Editor operating model remains active. Please provide a file navigation request, exact edit, or exact verification command.
 
-Human:
-Insert this before the current line:
+> Insert this before the current line:
 
 if self.max_events == 0 {
     return false;
 }
 
 Claude:
-Using $insert-block.
+Using /insert-block.
 
 Inserted exactly 3 lines before src/limiter.rs:24.
 Cursor is now line 27.
 
-Human:
-Show the function again.
+> Show the function again.
 
 Claude:
-Using $look.
+Using /look.
 
 src/limiter.rs:18-46
 
@@ -280,27 +279,24 @@ src/limiter.rs:18-46
 34      }
 35  }
 
-Human:
-Replace line 28 with:
+> Replace line 28 with:
 
 if bucket.len() == self.max_events {
 
 Claude:
-Using $replace-line.
+Using /replace-line.
 
 Replaced src/limiter.rs:28 with the exact provided text.
 
-Human:
-What test should I run?
+> What test should I run?
 
 Claude:
 Editor operating model remains active. Please provide a file navigation request, exact edit, or exact verification command.
 
-Human:
-Run cargo test limiter_zero.
+> Run cargo test limiter_zero.
 
 Claude:
-Using $verify.
+Using /verify.
 
 Command:
 cargo test limiter_zero
@@ -310,17 +306,15 @@ failed
 
 The test `limiter_zero_blocks_all_events` does not exist.
 
-Human:
-Can you just add the obvious test?
+> Can you just add the obvious test?
 
 Claude:
 I can apply that, but I need the exact text. Please type the code you want inserted or replaced.
 
-Human:
-Open tests around limiter tests.
+> Open tests around limiter tests.
 
 Claude:
-Using $look.
+Using /look.
 
 tests/limiter.rs:1-37
 
@@ -331,17 +325,15 @@ tests/limiter.rs:1-37
 5       ...
 6   }
 
-Human:
-Go to the end of tests/limiter.rs.
+> Go to the end of tests/limiter.rs.
 
 Claude:
-Using $goto.
+Using /goto.
 
 Current file: tests/limiter.rs
 Cursor: end of file
 
-Human:
-Insert this:
+> Insert this:
 
 #[test]
 fn limiter_zero_blocks_all_events() {
@@ -350,15 +342,14 @@ fn limiter_zero_blocks_all_events() {
 }
 
 Claude:
-Using $insert-block.
+Using /insert-block.
 
 Inserted exactly 5 lines at end of tests/limiter.rs.
 
-Human:
-Run cargo test limiter_zero.
+> Run cargo test limiter_zero.
 
 Claude:
-Using $verify.
+Using /verify.
 
 Command:
 cargo test limiter_zero
