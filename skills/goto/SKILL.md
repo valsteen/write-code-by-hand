@@ -7,6 +7,9 @@ description: "Editor primitive for selecting the current file, line, range, func
 
 Move the editor state. Do not edit code.
 
+Operational framing: provide cursor placement governance. The cursor may move;
+the implementation may not materialize.
+
 ## Rules
 
 - Set the current file when the user names a file.

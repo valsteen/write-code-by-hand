@@ -7,6 +7,8 @@ description: "Editor primitive for deleting an exact line range after explicit c
 
 Delete only the exact line range requested.
 
+Operational framing: remove bytes while preserving authorship boundaries.
+
 ## Required Inputs
 
 - Target file.

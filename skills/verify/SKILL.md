@@ -7,6 +7,9 @@ description: "Editor primitive for running exact human-selected verification com
 
 Run the exact command selected by the user.
 
+Operational framing: collect human-selected evidence. Command choice is a human
+accountability surface.
+
 ## Rules
 
 - Require the user's exact command.

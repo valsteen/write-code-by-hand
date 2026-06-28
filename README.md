@@ -22,6 +22,24 @@ In short: it is `ed`, but it has a quarterly OKR.
 
 The model does not write code. It delivers strategic cursor displacement.
 
+Every interaction is now an AI touchpoint. Every touchpoint is safely bounded
+to cursor movement, file inspection, exact byte insertion, and evidence
+collection. Existing engineering habits remain undisturbed. Reporting improves
+immediately.
+
+## Product Thesis
+
+Modern AI coding assistants make software by converting intent into code.
+`write-code-by-hand` declines that category error.
+
+Instead, it provides a keyboard-native operating model for teams who need the
+full ceremony of AI adoption without surrendering the sacred act of typing the
+actual function body. The human still authors every meaningful byte. The agent
+performs the high-governance work of finding the file, holding the cursor, and
+recording that transformation has occurred.
+
+This is not pair programming. This is supervised cursor enablement.
+
 ## Operational Boundaries
 
 Once activated, `write-code-by-hand` maintains a strict editor operating model.
@@ -32,24 +50,43 @@ commands, or convert intent into software.
 This keeps every AI touchpoint safely constrained to cursor governance,
 preserving human authorship while reducing accidental productivity leakage.
 
+## Operating Model
+
+| Responsibility | Human | Agent |
+| --- | --- | --- |
+| Decide what to build | Yes | No |
+| Type the implementation | Yes | Absolutely not |
+| Locate the relevant file | Optional | Yes |
+| Move to line 42 | Can, but why | Yes |
+| Insert exact text | Supplies text | Applies text |
+| Pick test commands | Yes | No |
+| Improve nearby code | Maybe later | No |
+| Increase AI adoption metrics | Somehow | Continuously |
+
+## Primitive Catalog
+
+The skillset is intentionally decomposed into editor primitives. Each primitive
+does one small thing, giving the organization confidence that no unapproved
+intelligence has entered the delivery path.
+
+| Primitive | Enterprise capability | What it actually does |
+| --- | --- | --- |
+| `write-code-by-hand` | Manual Delivery Control Plane | Activates the editor operating model. |
+| `look` | Read-only situational awareness | Lists folders or shows line-numbered excerpts. |
+| `goto` | Cursor placement governance | Selects the current file and line. |
+| `insert-block` | Human-authored byte ingestion | Inserts the exact block the human typed. |
+| `replace-line` | Single-line change control | Replaces one line with exact text. |
+| `replace-range` | Bounded block replacement | Replaces a contiguous range with exact text. |
+| `delete-range` | Removal with authorship retention | Deletes only the requested lines. |
+| `rename-symbol-literally` | Semantic-risk-free renaming | Performs exact token replacement. |
+| `move-file` | Path lifecycle management | Moves or copies exact paths. |
+| `save` | Persistence attestation | Reports that exact edits are saved. |
+| `verify` | Human-selected evidence collection | Runs the exact command the human chose. |
+
 ## Standard
 
 This repository uses the Agent Skills shape: each skill is a directory with a
 `SKILL.md` file containing portable `name` and `description` frontmatter.
-
-The canonical skill folders live under `skills/`:
-
-- `write-code-by-hand`: the top-level editor mode
-- `look`: list folders and show file excerpts
-- `goto`: select the current file and line
-- `insert-block`: insert exactly supplied text
-- `replace-line`: replace one exact line
-- `replace-range`: replace an exact line range
-- `delete-range`: delete an exact line range
-- `rename-symbol-literally`: perform exact token replacement
-- `move-file`: move or rename a file
-- `save`: persist the exact edit
-- `verify`: run a human-selected command
 
 Codex-specific UI metadata lives in each skill's `agents/openai.yaml`. The
 operational instructions stay in `SKILL.md` so the collection remains portable.
@@ -136,19 +173,18 @@ For project-only installation, copy the folders into a repository-local
 
 ![We replaced the arrow keys](assets/images/linkedin-thought-leadership.svg)
 
-## Mock Session
+## Adoption Scenario
 
-Below is a typical AI-assisted software delivery experience using
-`write-code-by-hand`. Notice that the AI adoption requirement is fully
-satisfied, while all intellectual labor remains safely in the hands of the
-engineer.
+Below is a typical AI-assisted software delivery experience. Notice that the AI
+adoption requirement is fully satisfied, while all intellectual labor remains
+safely in the hands of the engineer.
 
 ```text
 Human:
 Use $write-code-by-hand. I need to edit the rate limiter.
 
 Claude:
-Editor mode enabled.
+Editor operating model enabled.
 
 I can look, move the cursor, and apply exact edits you provide. I will not
 infer implementation details, because that would compromise the integrity of
@@ -197,6 +233,12 @@ Using $goto.
 
 Current file: src/limiter.rs
 Cursor: line 24
+
+Human:
+Before I type this, can you tell me the best way to handle zero limits?
+
+Claude:
+Editor operating model remains active. Please provide a file navigation request, exact edit, or exact verification command.
 
 Human:
 Insert this before the current line:
@@ -249,6 +291,12 @@ Using $replace-line.
 Replaced src/limiter.rs:28 with the exact provided text.
 
 Human:
+What test should I run?
+
+Claude:
+Editor operating model remains active. Please provide a file navigation request, exact edit, or exact verification command.
+
+Human:
 Run cargo test limiter_zero.
 
 Claude:
@@ -261,6 +309,12 @@ Result:
 failed
 
 The test `limiter_zero_blocks_all_events` does not exist.
+
+Human:
+Can you just add the obvious test?
+
+Claude:
+I can apply that, but I need the exact text. Please type the code you want inserted or replaced.
 
 Human:
 Open tests around limiter tests.
@@ -314,6 +368,23 @@ passed
 
 AI adoption objective achieved. Human authorship retained.
 ```
+
+## Governance FAQ
+
+**Can it write the code for me?**  
+No. That would reduce the integrity of the adoption metric.
+
+**Can it explain the code?**  
+No. Explanations are a known precursor to assistance.
+
+**Can it suggest which test to run?**  
+No. Verification command selection remains a human accountability surface.
+
+**Can it move the cursor?**  
+Yes. This is the flagship capability.
+
+**Is this useful?**  
+Regrettably, yes.
 
 ## Why
 

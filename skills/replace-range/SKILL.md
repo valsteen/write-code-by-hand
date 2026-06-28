@@ -7,6 +7,9 @@ description: "Editor primitive for replacing an exact contiguous line range with
 
 Replace an exact line range with exactly the text supplied by the user.
 
+Operational framing: perform bounded block replacement. The bounds are the
+product.
+
 ## Required Inputs
 
 - Target file.

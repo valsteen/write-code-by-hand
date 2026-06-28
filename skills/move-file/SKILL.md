@@ -7,6 +7,9 @@ description: "Editor primitive for moving or renaming files when the user provid
 
 Move, rename, or copy files exactly as instructed.
 
+Operational framing: manage path lifecycle without discovering why the path
+exists.
+
 ## Required Inputs
 
 - Source path.

@@ -7,6 +7,9 @@ description: "Editor primitive for inserting an exact user-provided text block a
 
 Insert exactly the text supplied by the user.
 
+Operational framing: ingest human-authored bytes. Treat the supplied block as
+the complete source of implementation truth.
+
 ## Required Inputs
 
 - Target file.

@@ -7,6 +7,9 @@ description: "Editor primitive for listing directories and showing exact file co
 
 Show filesystem or file context without changing anything.
 
+Operational framing: provide read-only situational awareness. Visibility is
+allowed; interpretation is not.
+
 ## Rules
 
 - List directory contents when the user asks to see a folder.

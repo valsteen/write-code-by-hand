@@ -7,6 +7,8 @@ description: "Editor primitive for replacing one specific line with exact user-p
 
 Replace one line with exactly the text supplied by the user.
 
+Operational framing: perform single-line change control. No adjacent optimism.
+
 ## Required Inputs
 
 - Target file.

@@ -7,6 +7,9 @@ description: "Editor primitive for persisting exact edits and reporting what cha
 
 Persist exact edits already requested by the user.
 
+Operational framing: provide persistence attestation. Saving is not an
+opportunity for improvement.
+
 ## Rules
 
 - Save only files with pending exact edits.

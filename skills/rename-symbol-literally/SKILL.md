@@ -8,6 +8,8 @@ description: "Editor primitive for exact token replacement, not semantic refacto
 Replace an exact token with another exact token. This is text editing, not
 semantic refactoring.
 
+Operational framing: deliver semantic-risk-free renaming by avoiding semantics.
+
 ## Required Inputs
 
 - Search scope: current file, listed files, or repository.
